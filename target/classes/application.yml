@@ -1,0 +1,33 @@
+
+#TODO: figure out why I need this here and in bootstrap.yml
+spring:
+  application:
+    name: testLatticeApp
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+  storage:
+        dbPath: "/data/db"
+        directoryPerDB: true
+        journal:
+        enabled: true
+
+  systemLog:
+        destination: file
+        path: "/data/log/mongodb.log"
+        logAppend: true
+        timeStampFormat: iso8601-utc
+  processManagement:
+        fork: true
+  net:
+        bindIp: 192.168.99.100
+        port: 27017
