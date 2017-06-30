@@ -61,6 +61,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/net.sourceforge.cobertura/cobertura -->
         <dependency>
             <groupId>net.sourceforge.cobertura</groupId>
@@ -68,6 +69,7 @@
             <version>2.1.1</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <repositories>

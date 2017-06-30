@@ -34,10 +34,6 @@ public class Application implements CommandLineRunner {
 	@Override
 	public void run(String[] args) throws Exception {
 
-
-		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
-		MongoCredential credential = MongoCredential.createCredential("nassim", "db", password);
-
 		repository.deleteAll();
 
 		repository.save(new School("Utrecht", "Dalton School"));
