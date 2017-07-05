@@ -1,4 +1,10 @@
-app\SchoolController.class
-app\School.class
-app\Application.class
-app\SchoolRepository.class
+schoolsearch\model\SchoolResponse.class
+schoolsearch\config\RabbitConfig.class
+schoolsearch\controller\SchoolController.class
+schoolsearch\repository\SchoolRepository.class
+schoolsearch\service\SchoolService.class
+schoolsearch\config\MongoConfig.class
+schoolsearch\rabbitmq\RabbitMQRunner.class
+schoolsearch\model\School.class
+schoolsearch\Application.class
+schoolsearch\rabbitmq\RabbitMQReceiver.class

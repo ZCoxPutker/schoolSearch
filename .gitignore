@@ -7,11 +7,12 @@
 .settings/
 bin
 build
-target
+/target
 dependency-reduced-pom.xml
 *.sublime-*
 /scratch
 .gradle
+.idea
 Guardfile
 README.html
 *.iml
