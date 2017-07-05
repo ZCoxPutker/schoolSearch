@@ -4,9 +4,14 @@
 *~
 .classpath
 .project
+.git
 .settings/
 bin
 build
+/lib
+lib
+data/*
+target/*
 /target/*
 dependency-reduced-pom.xml
 *.sublime-*
