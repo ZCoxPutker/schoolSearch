@@ -12,7 +12,6 @@ build
 lib
 data/*
 target/*
-/target/*
 dependency-reduced-pom.xml
 *.sublime-*
 /scratch
