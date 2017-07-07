@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS schools;
 DROP TABLE IF EXISTS studentsschools;
 
 CREATE TABLE students(
-id int NOT NULL PRIMARY KEY,
+id int NOT NULL PRIMARY KEY ,
 name varchar(100),
 birthday DATE
 );

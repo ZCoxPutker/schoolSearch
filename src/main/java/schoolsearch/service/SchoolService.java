@@ -1,93 +1,131 @@
-//package schoolsearch.service;
-//
-//import schoolsearch.rabbitmq.RabbitMQRunner;
-//import schoolsearch.repository.SchoolRepository;
-//import schoolsearch.model.School;
-//import schoolsearch.model.Response;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.ResponseEntity;
-//import org.springframework.stereotype.Service;
-//import org.springframework.web.bind.annotation.RequestBody;
-//
-//import java.util.List;
-//
-//@Service
-//public class SchoolService {
-//
-//    @Autowired
-//    private SchoolRepository schoolRepository;
-//
-//    @Autowired
-//    private RabbitMQRunner rabbitMQRunner;
-//
-//    public ResponseEntity<Response> populateMongo() {
-//
-//        try {
-//            schoolRepository.deleteAll();
-//
-//            schoolRepository.save(new School(1234, "Utrecht", "Jan Kristus"));
-//            schoolRepository.save(new School(4321, "Rotterdam", "De Bilt"));
-//            schoolRepository.save(new School(7563, "Den Haag", "St Antonius"));
-//            schoolRepository.save(new School(4326, "Utrecht", "De Sloot"));
-//
-//            rabbitMQRunner.run("Saved new schools!");
-//        } catch(Exception ex) {
-//            throw new RuntimeException();
+package schoolsearch.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import schoolsearch.model.Response;
+import schoolsearch.model.School;
+import schoolsearch.rabbitmq.RabbitMQRunner;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class SchoolService {
+
+    @Autowired
+    private RabbitMQRunner rabbitMQRunner;
+
+    private static Connection getConnection() throws ClassNotFoundException, SQLException {
+
+        Class.forName("org.postgresql.Driver");
+        Connection connection = null;
+        connection = DriverManager.getConnection(
+                "jdbc:postgresql://localhost:5432/schoolsearch","postgres", "password");
+
+        return connection;
+    }
+
+    public ResponseEntity<Response> findTableNames() throws Exception {
+        rabbitMQRunner.run("Finding table names...");
+
+        List<String> tableNames = new ArrayList<>();
+
+        Connection connection = getConnection();
+        DatabaseMetaData md = connection.getMetaData();
+        ResultSet rs = md.getTables(null, "public", "%", new String[] {"TABLE"} );
+        while (rs.next()) {
+            tableNames.add(rs.getString(3));
+
+        }
+        connection.close();
+
+        rabbitMQRunner.run("found!");
+
+        return ResponseEntity.ok().body(new Response(tableNames));
+    }
+
+    //change input to list
+    public ResponseEntity<Response> insertToDatabase(School school) throws Exception {
+        rabbitMQRunner.run("Inserting data...");
+
+        Connection connection = getConnection();
+
+        String sql = "INSERT INTO schools VALUES (?, ?)";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+
+//        for(School school: school) {
+            pstmt.setString(2,school.getName());
+            pstmt.setString(3,school.getCity());
+            pstmt.executeUpdate();
 //        }
-//        return ResponseEntity.ok().body(new Response(true));
-//
-//    }
-//
-//    public ResponseEntity<Response> newSchool(@RequestBody School school) {
-//
-//        try {
-//            schoolRepository.save(school);
-//            rabbitMQRunner.run("New school added!");
-//
-//        } catch(Exception ex) {
-//            throw new RuntimeException();
-//        }
-//        return ResponseEntity.ok().body(new Response(true));
-//    }
-//
-//    public ResponseEntity<Response> findByName(String name) {
-//
-//        try {
-//            List<School> foundSchools = schoolRepository.findByName(name);
-//            rabbitMQRunner.run("Found " + foundSchools.size() + " schools with name " +
-//                    name + ".");
-//
-//            return ResponseEntity.ok().body(new Response(foundSchools));
-//
-//        } catch(Exception ex) {
-//            throw new RuntimeException();
-//        }
-//    }
-//
-//    public ResponseEntity<Response> findByCity(String city) {
-//
-//        try {
-//            List<School> foundSchools = schoolRepository.findByCity(city);
-//            rabbitMQRunner.run("Found " + foundSchools.size() + " schools in city " +
-//                    city + ".");
-//
-//            return ResponseEntity.ok().body(new Response(foundSchools));
-//
-//        } catch(Exception ex) {
-//            throw new RuntimeException();
-//        }
-//    }
-//
-//    public ResponseEntity<Response> findAll() {
-//
-//        try {
-//            List<School> schools = schoolRepository.findAll();
-//            rabbitMQRunner.run("Found all schools!");
-//
-//            return ResponseEntity.ok().body(new Response(schools));
-//
-//        } catch(Exception ex) {
-//            throw new RuntimeException();
-//        }
-//    }
-//}
+
+        connection.commit();
+        connection.close();
+        rabbitMQRunner.run("done!");
+
+        return ResponseEntity.ok().body(new Response(true));
+    }
+
+    public ResponseEntity<Response> findAllSchools() throws Exception {
+        rabbitMQRunner.run("Finding all schools...");
+
+        List<School> schoolInfo = new ArrayList<>();
+        Connection connection = getConnection();
+
+        String sql = "SELECT * FROM schools";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()) {
+            schoolInfo.add(new School(rs.getString(2), rs.getString(3)));
+        }
+
+        connection.close();
+        rabbitMQRunner.run("done!");
+
+        return ResponseEntity.ok().body(new Response(schoolInfo));
+    }
+
+    public ResponseEntity<Response> findByName(String name) throws Exception {
+        rabbitMQRunner.run("Finding schools with name: " + name + "...");
+        List<School> results = new ArrayList<>();
+
+        Connection connection = getConnection();
+        String sql = "SELECT * FROM schools WHERE name = ?";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1,name);
+
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()) {
+            results.add(new School(rs.getString(2), rs.getString(3)));
+        }
+        rabbitMQRunner.run("found " + results.size() + " results!");
+
+        return ResponseEntity.ok().body(new Response(results));
+    }
+
+    public ResponseEntity<Response> findByCity(String city) throws Exception {
+        rabbitMQRunner.run("Finding schools with name: " + city + "...");
+        List<School> results = new ArrayList<>();
+
+        Connection connection = getConnection();
+        String sql = "SELECT * FROM schools WHERE city = ?";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1,city);
+
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()) {
+            results.add(new School(rs.getString(2), rs.getString(3)));
+        }
+        rabbitMQRunner.run("found " + results.size() + " results!");
+
+        return ResponseEntity.ok().body(new Response(results));
+    }
+
+}

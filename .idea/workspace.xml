@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d85484-c55e-4508-b031-9c11f65899ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_10_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/config/MongoConfig.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/controller/StudentController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/model/Student.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/service/StudentService.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schoolsearch.iml" afterPath="$PROJECT_DIR$/schoolsearch.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/Application.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/schoolsearch/model/SchoolResponse.java" afterPath="$PROJECT_DIR$/src/main/java/schoolsearch/model/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql" afterPath="$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,49 +25,48 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SchoolService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SchoolRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="V01_schoolSearch.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            <state relative-caret-position="378">
+              <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java">
+      <file leaf-file-name="SchoolService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+            <state relative-caret-position="-77">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1499424022845" expanded="true" signature="1464:1497" ph=" INSERT statement (SCHOOLS)" />
-                <marker date="1499424022845" expanded="true" signature="2183:2197" ph=" SELECT statement (CITY_EXAMPLE)" />
-                <marker date="1499424022845" expanded="true" signature="2183:2204" ph=" SELECT statement (SCHOOLS)" />
+                <marker date="1499433668316" expanded="true" signature="1658:1691" ph=" INSERT statement (SCHOOLS)" />
+                <marker date="1499433668316" expanded="true" signature="2363:2384" ph=" SELECT statement (SCHOOLS)" />
+                <marker date="1499433668316" expanded="true" signature="3022:3058" ph=" SELECT statement (SCHOOLS)" />
+                <marker date="1499433668316" expanded="true" signature="3725:3761" ph=" SELECT statement (SCHOOLS)" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/StudentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,8 +74,8 @@
       <file leaf-file-name="School.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -93,21 +84,43 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java">
+      <file leaf-file-name="SchoolController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="427">
+              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RabbitMQRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/rabbitmq/RabbitMQRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,14 +174,17 @@
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/config/MongoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/rabbitmq/RabbitMQRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql" />
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java" />
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/model/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/schoolsearch/controller/StudentController.java" />
       </list>
     </option>
   </component>
@@ -288,32 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schoolsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schoolsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -863,15 +853,16 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919955" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20180383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28464016" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18259935" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -883,7 +874,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -901,33 +891,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/SchoolControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -955,9 +918,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,9 +983,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,9 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,9 +1058,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,9 +1103,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,85 +1176,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/rabbitmq/RabbitMQRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+        <state relative-caret-position="399">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/DatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/repository/SchoolRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/rabbitmq/RabbitMQRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/model/School.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/SchoolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/DatabaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/V01_schoolSearch.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+        <state relative-caret-position="378">
+          <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/schoolsearch/service/SchoolService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499424022845" expanded="true" signature="1464:1497" ph=" INSERT statement (SCHOOLS)" />
-            <marker date="1499424022845" expanded="true" signature="2183:2197" ph=" SELECT statement (CITY_EXAMPLE)" />
-            <marker date="1499424022845" expanded="true" signature="2183:2204" ph=" SELECT statement (SCHOOLS)" />
+            <marker date="1499433668316" expanded="true" signature="1658:1691" ph=" INSERT statement (SCHOOLS)" />
+            <marker date="1499433668316" expanded="true" signature="2363:2384" ph=" SELECT statement (SCHOOLS)" />
+            <marker date="1499433668316" expanded="true" signature="3022:3058" ph=" SELECT statement (SCHOOLS)" />
+            <marker date="1499433668316" expanded="true" signature="3725:3761" ph=" SELECT statement (SCHOOLS)" />
           </folding>
         </state>
       </provider>
