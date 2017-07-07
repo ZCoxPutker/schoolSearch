@@ -1,10 +1,10 @@
 package schoolsearch.model;
 
-public class SchoolResponse {
+public class Response {
 
     private Object payload;
 
-    public SchoolResponse(Object payload) {
+    public Response(Object payload) {
         this.payload = payload;
     }
 

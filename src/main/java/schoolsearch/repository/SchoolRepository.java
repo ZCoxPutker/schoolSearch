@@ -1,13 +1,11 @@
 package schoolsearch.repository;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-import schoolsearch.model.School;
-import org.springframework.data.mongodb.repository.MongoRepository;
-
 @Repository
-public interface SchoolRepository extends MongoRepository<School, String> {
+public interface SchoolRepository <School, String> {
     List<School> findByCity(String city);
     List<School> findByName(String name);
 }

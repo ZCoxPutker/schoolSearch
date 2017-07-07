@@ -1,9 +1,7 @@
 package schoolsearch.model;
 
-import org.springframework.data.annotation.Id;
 
 public class School {
-    @Id
     public int id;
 
     public String city;
